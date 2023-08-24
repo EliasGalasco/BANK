@@ -1,0 +1,136 @@
+
+/* Estilos generales */
+a{
+  text-decoration: none;
+}
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+.imagen_icon{
+    height: 45px;
+    padding: 0px 10px;
+}
+.navbtn{
+  height: 60px;
+  width: 100%;
+  border-left: none;
+  border-right: none;
+  border-bottom: none;
+}
+.navbtn:hover{
+color: #fcfdfd;
+background-color: #6d6d6d;
+justify-content: space-between;
+}
+
+.menusidebar{
+  margin-top: 100px;
+}
+.list{
+  color: black;
+  font-weight: bolder;
+  font-size: 20px;
+  text-decoration: none;
+}
+/*LOGIN*/
+.login{
+  font-weight: bold;
+  color: black;
+  text-decoration: none;
+}
+/* Estilos para el menú lateral */
+.sidebar {
+    width: 200px;
+    height: 100%;
+    background-color: #87f890;
+    float: left;
+}
+
+/* Estilos para el encabezado con secciones */
+header {
+    background-color: #52f768;
+    padding: 20px;
+}
+
+/* Estilos para el contenido principal */
+main {
+    padding: 20px;
+    margin-left: 200px; /* Ajusta el margen izquierdo para dejar espacio al menú lateral */
+}
+
+/* Estilos para el pie de página */
+footer {
+    background-color: #f1f1f1;
+    padding: 20px;
+    clear: both;
+}
+
+/*PIE DE PAGINA*/
+.pie-pagina, .grupo-1 {
+    margin-top: 20px;
+    width: 100%;
+    background-color: #0a141d;
+  }
+  
+  .pie-pagina .grupo-1, .grupo-1 .grupo-1 {
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 50px;
+    padding: 45px 0px;
+  }
+  
+  .pie-pagina .grupo-1 .box figure, .grupo-1 .grupo-1 .box figure {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .pie-pagina .grupo-1 .box figure img, .grupo-1 .grupo-1 .box figure img {
+    width: 250px;
+  }
+  
+  .pie-pagina .grupo-1 .box h2, .grupo-1 .grupo-1 .box h2 {
+    color: #fff;
+    margin-bottom: 25px;
+    font-size: 20px;
+  }
+  
+  .pie-pagina .grupo-1 .box p, .grupo-1 .grupo-1 .box p {
+    color: #efefef;
+    margin-bottom: 10px;
+  }
+  
+  .pie-pagina .grupo-1 .red-social a, .grupo-1 .grupo-1 .red-social a {
+    display: inline-block;
+    text-decoration: none;
+    width: 45px;
+    height: 45px;
+    line-height: 45px;
+    color: #fff;
+    margin-right: 10px;
+    background-color: #0d2033;
+    text-align: center;
+    transition: all 300ms ease;
+  }
+  
+  .pie-pagina .grupo-1 .red-social a:hover, .grupo-1 .grupo-1 .red-social a:hover {
+    color: aqua;
+  }
+  
+  .pie-pagina .grupo-2, .grupo-1 .grupo-2 {
+    background-color: #0a1a2a;
+    padding: 15px 10px;
+    text-align: center;
+    color: #fff;
+  }
+  
+  .pie-pagina .grupo-2 small, .grupo-1 .grupo-2 small {
+    font-size: 15px;
+  }
