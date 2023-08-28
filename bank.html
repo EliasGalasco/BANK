@@ -13,6 +13,11 @@
   <link rel="stylesheet" href="./page/pagos.html">
   <link rel="stylesheet" href="./login/login.html">
   <link rel="stylesheet" href="style.css">
+  <!--FONTS-->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300&family=Nunito:ital,wght@1,300&display=swap" rel="stylesheet">
+  <!--FONTS-->
 </head>
 <!-- BODY-->
 <body>
@@ -26,33 +31,54 @@
     </div>    
 </div>
 
-<header class="d-flex justify-content-between">
-    <!-- Contenido del encabezado con secciones -->
-    <div class="d-flex">
+<header class="">
+  <div class="collapse" id="navbarToggleExternalContent">
+    <div class="bg-dark p-4">
+      <h5 class="text-white h4">Collapsed content</h5>
+      <span class="text-muted">Toggleable via the navbar brand.</span>
+    </div>
+  </div>
+  <nav class="navbar navbar-dark bg-dark">
+    <div class="container-fluid">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    </div>
+  </nav>
+    <!-- <div class="d-flex">
       <img class="imagen_icon" src="https://yt3.googleusercontent.com/ytc/AOPolaQ9_W1JJwBt0yAn3lw8NpA0iOqwdcjP6S7FYPOFAA=s900-c-k-c0x00ffffff-no-rj" alt="">
       <h1>BANK MASSA </h1>
     </div>
     <div>
       <a href="./login/login.html" class="login">LOGIN <img class="imagen_icon" src="https://yt3.googleusercontent.com/ytc/AOPolaQ9_W1JJwBt0yAn3lw8NpA0iOqwdcjP6S7FYPOFAA=s900-c-k-c0x00ffffff-no-rj" alt=""></a>
-    </div>
+    </div> -->
 </header>
 
 <main>
       <!-- Contenido principal -->
-  <h2>Contenido principal</h2>
-    <section>
-        <h2>Sección 1</h2>
+  <h2>INICIO</h2>
+    <section class="section1">
+        <div class="iconoPublicidad">
+          <img class="imagenpubli" src="https://static.vecteezy.com/system/resources/previews/020/619/859/non_2x/web-bank-logo-brand-symbol-design-graphic-minimalist-logo-vector.jpg" alt="iconoDePublicidad">
+        </div>
+        <div class="Banner">
+          <p class="bannerP">¿Hiciste rendir tu plata hoy? Hacelo de 4 a 00 p.m con Mass Premium.</p>
+          <spam class="bannerSpam">La invertis y cuando necesites usarla, se acredita al instante en tu cuenta.</spam>
+        </div>
+        <div class="btnBanner">
+          <button class="btnBanner1">Invertir Ahora</button>
+        </div>
     </section>
     <section>
         <h2>Sección 2</h2>
     </section>
     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec auctor, libero nec euismod malesuada, neque nulla eleifend ex, nec ultrices mauris risus ac massa.</p>
 </main>
-
+<!--FOOTER-->
 <footer class="pie-pagina">
   <div class="grupo-1">
-      <div class="box">
-          <figure>
+      <div class="box imgFooter">
+          <figure >
               <a href="#">
                   <img src="https://yt3.googleusercontent.com/ytc/AOPolaQ9_W1JJwBt0yAn3lw8NpA0iOqwdcjP6S7FYPOFAA=s900-c-k-c0x00ffffff-no-rj" alt="Logo de BANKMASSA">
               </a>

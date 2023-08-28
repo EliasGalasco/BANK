@@ -1,4 +1,10 @@
-
+body{
+  font-family: 'Inter', sans-serif;
+}
+h1{
+  font-family: 'Nunito', sans-serif;
+  font-weight: 600;
+}
 /* Estilos generaless */
 a{
   text-decoration: none;
@@ -18,6 +24,10 @@ html, body {
   border-left: none;
   border-right: none;
   border-bottom: none;
+  display: flex;
+  text-align: start;
+  align-items: center;
+  color: #6d6d6d;
 }
 .navbtn:hover{
 color: #fcfdfd;
@@ -33,6 +43,7 @@ justify-content: space-between;
   font-weight: bolder;
   font-size: 20px;
   text-decoration: none;
+
 }
 /*LOGIN*/
 .login{
@@ -42,23 +53,68 @@ justify-content: space-between;
 }
 /* Estilos para el menú lateral -- */
 .sidebar {
-    width: 200px;
+    width: 300px;
     height: 100%;
-    background-color: #87f890;
+    background-color: #f7faf7;
     float: left;
 }
 
 /* Estilos para el encabezado con secciones */
 header {
-    background-color: #52f768;
+    background-color: #f9fdfa;
     padding: 20px;
 }
 
 /* Estilos para el contenido principal */
 main {
-    padding: 20px;
+    padding: 20px 0px 20px 130px;
     margin-left: 200px; /* Ajusta el margen izquierdo para dejar espacio al menú lateral */
 }
+
+/*-------SECTION 1------*/
+.section1{
+  border: 2px solid rgb(184, 170, 170);
+  padding: 5px;
+  margin-right: 15px;
+  overflow: hidden;
+  border-radius: 5px;
+  justify-content: space-around;
+  display: flex;
+
+}
+.imagenpubli{
+  display: flex;
+  flex-direction: column;
+  width: 200px;
+}
+.Banner{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  margin-right: 150px;
+}
+.bannerP{
+  font-size: larger;
+  font-weight: 700;
+  font-weight: bold;
+}
+.bannerSpam{
+  font-size: larger;
+}
+.btnBanner{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+.btnBanner1{
+  border-radius: 125px;
+  color: #efefef;
+  background-color: blueviolet;
+  padding: 5px 12px;
+}
+
 
 /* Estilos para el pie de página */
 footer {
@@ -133,4 +189,26 @@ footer {
   
   .pie-pagina .grupo-2 small, .grupo-1 .grupo-2 small {
     font-size: 15px;
+  }
+
+
+  /*----Responsive---*/
+  @media screen and (max-width: 1508px) {
+    .imagenpubli{
+      display: none;
+    }
+    .btnBanner{
+      justify-content: center;
+    }
+  }
+  @media screen and (max-width: 1000px) {
+    .section1{
+      display: block;
+    }
+    .btnBanner1{
+      width: auto;
+    }
+    .imgFooter{
+      display: none !important;
+    }
   }
