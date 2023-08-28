@@ -93,7 +93,6 @@ main {
   justify-content: center;
   text-align: center;
   align-items: center;
-  margin-right: 150px;
 }
 .bannerP{
   font-size: larger;
@@ -190,6 +189,37 @@ footer {
   .pie-pagina .grupo-2 small, .grupo-1 .grupo-2 small {
     font-size: 15px;
   }
+  /*-----RESUMEN DE CUENTA--------*/
+  .cuadricula{
+    border: 2px solid rgb(184, 170, 170);
+    border-radius: 10px;
+  }
+  .saldo{
+    display: inline-flex;
+    font-weight: bold;
+    font-size: 30px;
+  }
+  .ultimosMovimientos{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    border: 2px solid rgb(184, 170, 170);
+    grid-gap: 50px;
+  }
+  .img-icon{
+    height: 60px;
+  }
+
+  /*-----Transferenia-----*/
+  .prestamos{
+    display: none;
+  }
+  .transferencia{
+    display: none;
+  }
+
+  .pagos{
+    display: none;
+  }
 
 
   /*----Responsive---*/
@@ -210,5 +240,32 @@ footer {
     }
     .imgFooter{
       display: none !important;
+      justify-content: space-between;
+    }
+    .grupo-1{
+      display: flex!important;
+      flex-direction: column;
+      justify-content: center;
+      text-align: center;
+    }
+  }
+  @media screen and (max-width: 710px) {
+    .sidebar{
+      display: none;
+    }
+    main{
+      margin: 0px;
+      padding: 0px;
+    }
+  }
+  @media screen and (max-width: 710px) {
+    .form-control{
+      display: none;
+    }
+    .btn-outline-success{
+      display: none;
+    }
+    .navbar-brand{
+      margin: 0px;
     }
   }

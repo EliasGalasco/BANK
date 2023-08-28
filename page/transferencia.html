@@ -5,9 +5,241 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../bank.html">
     <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./page/cuentas.html">
+    <link rel="stylesheet" href="./page/transferencia.html">
+    <link rel="stylesheet" href="./page/pagos.html">
+    <link rel="stylesheet" href="./login/login.html">
+    <link rel="stylesheet" href="../style.css">
+    <!--SweetAlert-->
+    <link href="https://cdn.jsdelivr.net/npm/@sweetalert2/theme-dark@4/dark.css" rel="stylesheet">
+    <!--FONTS-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300&family=Nunito:ital,wght@1,300&display=swap" rel="stylesheet">
+  <!--FONTS-->
 </head>
 <body>
-    <h1>Trasferencia</h1>
-    <a href="../bank.html">GO back</a>
+      <!-- SIDEBAR-->
+  <div class="sidebar">
+    <!-- Contenido del menú lateral -->
+    <div class="menusidebar p-1">
+        <a class="list"  href="../bank.html"><button class="navbtn">Inicio</button></a>
+        <a class="list" href="./cuentas.html"><button class="navbtn">Cuenta</button></a>
+        <a class="list" href="./transferencia.html"><button class="navbtn">Trasferencia</button></a>
+        <a class="list" href="./pagos.html"><button class="navbtn">Pagos</button></a>
+    </div>    
+</div>
+<!--HEADER-->
+<header class="">
+  <nav class="navbar navbar-light bg-light">
+    <div class="container-fluid">
+      <div>
+        <img class="imagen_icon" src="https://yt3.googleusercontent.com/ytc/AOPolaQ9_W1JJwBt0yAn3lw8NpA0iOqwdcjP6S7FYPOFAA=s900-c-k-c0x00ffffff-no-rj" alt="">
+      <a class="navbar-brand">Massa Bank</a>
+      </div>
+      <form class="d-flex">
+        <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Buscar">
+        <button class="btn btn-outline-success" type="submit">Login</button>
+        <a href="#"><img class="imagen_icon" src="https://cdn-icons-png.flaticon.com/512/4139/4139981.png" alt=""></a>
+      </form>
+    </div>
+  </nav>
+</header>
+<!--MAIN-->
+<main>
+      <!-- Contenido principal -->
+  <h2>TRANSFERENCIAS</h2>
+    <section class="section1">
+        <div class="iconoPublicidad">
+          <img class="imagenpubli" src="https://static.vecteezy.com/system/resources/previews/020/619/859/non_2x/web-bank-logo-brand-symbol-design-graphic-minimalist-logo-vector.jpg" alt="iconoDePublicidad">
+        </div>
+        <div class="Banner">
+          <p class="bannerP">¿Hiciste rendir tu plata hoy? Hacelo de 4 a 00 p.m con Mass Premium.</p>
+          <spam class="bannerSpam">La invertis y cuando necesites usarla, se acredita al instante en tu cuenta.</spam>
+        </div>
+        <div class="btnBanner">
+          <button class="btnBanner1">Invertir Ahora</button>
+        </div>
+    </section>
+    <div class="d-flex justify-content-evenly pt-4">
+      <button onclick="btnMostrar1();" class="btn-danger">Pagos</button>
+      <button onclick="btnMostrar2();" class="btn-danger">transferencia</button>
+      <button onclick="btnMostrar3();" class="btn-danger ">Solicitar Prestamos</button>
+    </div>
+    <section  class="d-flex justify-content-center pt-5">
+      <div id="bntTransferencia" class="transferencia">
+        <h2>Tranferencias</h2>
+        <div class="container forms">
+          <form class="row g-3 needs-validation" novalidate>
+              <div class="col-md-4">
+                  <label for="validationCustom01" class="form-label">Nombre</label>
+                  <input type="text" class="form-control" id="validationCustom01" required>
+                  <div class="valid-feedback">
+                      Controla su informacion!
+                  </div>
+              </div>
+              <div class="col-12 col-md-4">
+                  <label for="validationCustom02" class="form-label">Apellido</label>
+                  <input type="text" class="form-control" id="validationCustom02" required>
+                  <div class="valid-feedback">
+                      Controla su informacion!
+                  </div>
+              </div>
+              <div class="col-12 col-md-4">
+                  <label for="validationCustomUsername" class="form-label">Hotmail</label>
+                  <div class="input-group has-validation">
+                      <span class="input-group-text" id="inputGroupPrepend">@</span>
+                      <input type="text" class="form-control" id="validationCustomUsername"
+                          aria-describedby="inputGroupPrepend" required>
+                      <div class="invalid-feedback">
+                          Porfavor escribe un hotmail.
+                      </div>
+                  </div>
+              </div>
+              <div class=" col-12 col-md-6">
+                  <label for="validationCustom03" class="form-label">CBU/Alias del Destinatario</label>
+                  <input type="text" class="form-control" id="validationCustom03" required>
+                  <div class="invalid-feedback">
+                      Porfavor escribe Cbu/Alias.
+                  </div>
+              </div>
+              <div class="input-group has-validation">
+                <span class="input-group-text" id="inputGroupPrepend">$</span>
+                <input type="text" class="form-control" id="validationCustomUsername"
+                    aria-describedby="inputGroupPrepend" required>
+                <div class="invalid-feedback">
+                    Porfavor escribe el monto.
+                </div>
+            </div>
+              <div class="col-12 col-md-6">
+              </div>
+              <div class="form-floating">
+                  <textarea class="form-control" placeholder="Comentarios" id="floatingTextarea2"
+                      style="height: 100px"></textarea>
+                  <label for="floatingTextarea2">Comentarios</label>
+              </div>
+              <div class="form-check">
+                  <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
+                  <label class="form-check-label" for="invalidCheck">
+                      Aceptar terminos y condiciones.
+                  </label>
+                  <div class="invalid-feedback">
+                      Debes aceptar los terminos.
+                  </div>
+              </div>
+              <div class="col-12 col-md-6">
+                  <button onclick="enviar()" id="btnEnviarForm" class="btn btn-primary" type="submit">Enviar</button>
+              </div>
+          </form>
+      </div>
+      </div>
+      <div id="bntPagos" class="pagos">
+        <h2>Pagos</h2>
+        <div class="container forms">
+          <form class="row g-3 needs-validation" novalidate>
+              <div class="col-md-4">
+                  <label for="validationCustom01" class="form-label">Empresa</label>
+                  <input type="text" class="form-control" id="validationCustom01" required>
+                  <div class="valid-feedback">
+                      Controla su informacion!
+                  </div>
+              </div>
+              <div class="col-12 col-md-4">
+                  <label for="validationCustom02" class="form-label">N*Cliente</label>
+                  <input type="text" class="form-control" id="validationCustom02" required>
+                  <div class="valid-feedback">
+                      Controla su informacion!
+                  </div>
+              </div>
+              <div class="col-12 col-md-4">
+                  <label for="validationCustomUsername" class="form-label">Hotmail</label>
+                  <div class="input-group has-validation">
+                      <span class="input-group-text" id="inputGroupPrepend">@</span>
+                      <input type="text" class="form-control" id="validationCustomUsername"
+                          aria-describedby="inputGroupPrepend" required>
+                      <div class="invalid-feedback">
+                          Porfavor escribe un hotmail.
+                      </div>
+                  </div>
+              </div>
+              <div class=" col-12 col-md-6">
+                  <label for="validationCustom03" class="form-label">Codigo de barras</label>
+                  <input type="text" class="form-control" id="validationCustom03" required>
+                  <div class="invalid-feedback">
+                      Porfavor escribe el Codigo de barras.
+                  </div>
+              </div>
+              <div class="input-group has-validation">
+                <span class="input-group-text" id="inputGroupPrepend">$</span>
+                <input type="text" class="form-control" id="validationCustomUsername"
+                    aria-describedby="inputGroupPrepend" required>
+                <div class="invalid-feedback">
+                    Porfavor escribe el monto.
+                </div>
+            </div>
+              <div class="col-12 col-md-6">
+              </div>
+              <div class="form-floating">
+                  <textarea class="form-control" placeholder="Comentarios" id="floatingTextarea2"
+                      style="height: 100px"></textarea>
+                  <label for="floatingTextarea2">Comentarios</label>
+              </div>
+              <div class="form-check">
+                  <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
+                  <label class="form-check-label" for="invalidCheck">
+                      Aceptar terminos y condiciones.
+                  </label>
+                  <div class="invalid-feedback">
+                      Debes aceptar los terminos.
+                  </div>
+              </div>
+              <div class="col-12 col-md-6">
+                  <button onclick="enviar()" id="btnEnviarForm" class="btn btn-primary" type="submit">Enviar</button>
+              </div>
+          </form>
+          </div>
+      </div>
+      <div id="bntPrestamos"  class="prestamos">
+        <h2>Solitar Prestamos</h2>
+      </div>
+    </section>
+</main>
+<!--FOOTER-->
+<footer class="pie-pagina">
+  <div class="grupo-1">
+      <div class="box imgFooter">
+          <figure >
+              <a href="#">
+                  <img src="https://yt3.googleusercontent.com/ytc/AOPolaQ9_W1JJwBt0yAn3lw8NpA0iOqwdcjP6S7FYPOFAA=s900-c-k-c0x00ffffff-no-rj" alt="Logo de BANKMASSA">
+              </a>
+          </figure>
+      </div>
+      <div class="box">
+          <h2>SOBRE NOSOTROS</h2>
+          <li class="d-flex justify-content-center"><a class="" href="#">TERMINOS Y CONDICIONES</a></li>
+          <li class="d-flex justify-content-center"><a class="" href="#">POLITICA DE PRIVACIODAD</a></li>
+          <p>Somos Un Banco Profesional en temas de finanzas.</p>
+          
+      </div>
+      <div class="box">
+          <h2>REDES SOCIALES</h2>
+          <div class="red-social">
+              <a target="_blank" href="#"><i class="fa-brands fa-facebook fa-fade"></i></a>
+              <a target="_blank" href="#"><i class="fa-brands fa-twitter fa-fade"></i></a>
+              <a href="#"><i class="fa-brands fa-instagram fa-fade"></i></a>
+              <a href="#"><i class="fa-brands fa-github fa-fade"></i></a>
+          </div>
+      </div>
+  </div>
+  <div class="grupo-2">
+      <small>&copy; 2022 <b>BANKMASSA</b> - Todos los Derechos Reservados.</small>
+  </div>
+</footer>
+<script src="../style.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.js"></script>
 </body>
 </html>
