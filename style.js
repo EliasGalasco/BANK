@@ -19,13 +19,35 @@ function enviar (btnEnviar){
     alert("Se ha enviado con Exito!")
 }
 /*----------LOGGIN------ */
+let userData = {}; // Objeto para almacenar los datos del usuario
 
-document.getElementById("loginForm").addEventListener("submit", function(event) {
-    event.preventDefault(); // Evita que el formulario se envíe automáticamente
-    
-    // Obtén el valor ingresado por el usuario
-    var username = document.getElementById("username").value;
-    
+document.getElementById("registerForm").addEventListener("submit", function(event) {
+  event.preventDefault(); // Evita que el formulario se envíe automáticamente
+
+  // Obtén los valores ingresados por el usuario
+let name = document.getElementById("name").value;
+let password = document.getElementById("password").value;
+
+  // Guarda los datos en el objeto userData
+userData.name = name;
+userData.password = password;
+
+  // Reiniciar el formulario
+this.reset();
+});
+
+document.getElementById("loginButton").addEventListener("click", function() {
+  // Obtén los valores ingresados por el usuario en el formulario de inicio de sesión
+let name = document.getElementById("name").value;
+let password = document.getElementById("password").value;
+
+  // Verifica si los datos ingresados coinciden con los almacenados en el objeto userData
+if (userData.name === name && userData.password === password) {
     // Modifica el párrafo con el nombre ingresado
-    document.getElementById("welcomeMessage").textContent = "Bienvenido, " + username;
-  });
+    document.getElementById("welcomeMessage").textContent = "Bienvenido, " + name;
+    alert('Has iniciado con Exito!');
+} else {
+    // Muestra un alerta de nombre de usuario o contraseña incorrectos
+    alert("Nombre de usuario o contraseña incorrectos");
+}
+});
