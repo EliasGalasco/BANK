@@ -38,11 +38,19 @@
         <img class="imagen_icon" src="https://yt3.googleusercontent.com/ytc/AOPolaQ9_W1JJwBt0yAn3lw8NpA0iOqwdcjP6S7FYPOFAA=s900-c-k-c0x00ffffff-no-rj" alt="">
       <a class="navbar-brand">Massa Bank</a>
       </div>
-      <form class="d-flex">
-        <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Buscar">
-        <button class="btn btn-outline-success" type="submit">Login</button>
-        <a href="#"><img class="imagen_icon" src="https://cdn-icons-png.flaticon.com/512/4139/4139981.png" alt=""></a>
-      </form>
+      <div>
+        <form id="loginForm" class="d-flex LOGIN">
+          <input class="form-control me-2" id="name"  type="search" placeholder="Nombre" aria-label="Buscar" required>
+          <input type="password" id="password"  class="form-control  me-2" type="search" placeholder="Constraseña" aria-label="Buscar">
+          <input type="submit" value="Register" class="btn btn-outline-success" type="submit"></input> 
+          <input id="loginButton" type="submit" value="Iniciar Sesión" class="btn btn-outline-success" ></input> 
+          <!-- ICONO -->
+          <div class="users">
+            <a href="#"><img class="imagen_icon" src="https://cdn-icons-png.flaticon.com/512/4139/4139981.png" alt=""></a>
+            <p id="welcomeMessage">Bienvenido, Default</p>
+          </div>
+        </form>
+      </div>
     </div>
   </nav>
 </header>
@@ -98,5 +106,6 @@
       <small>&copy; 2022 <b>BANKMASSA</b> - Todos los Derechos Reservados.</small>
   </div>
 </footer>
+<script src="style.js"></script>
 </body>
 </html>

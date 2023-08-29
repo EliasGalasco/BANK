@@ -51,6 +51,9 @@ justify-content: space-between;
   color: black;
   text-decoration: none;
 }
+.users{
+  height: 30px;
+}
 /* Estilos para el menú lateral -- */
 .sidebar {
     width: 300px;
